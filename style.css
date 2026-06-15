@@ -1,8 +1,16 @@
 /* Core Layout Settings */
+html, body {
+    overflow-x: hidden;
+}
+
 body {
     font-family: 'Inter', sans-serif;
     background-color: #f9f7f2;
     color: #1a1a1a;
+}
+
+#projects {
+    min-width: 0;
 }
 
 /* Smooth fluid transitions for cards */
@@ -53,7 +61,7 @@ nav.grid.grid-cols-3 a {
 /* Retrigger a quick tactical hop on cursor hover */
 .hover-jump:hover {
     transform: translateY(-8px) scale(1.1);
-    color: #5c44b5; /* Purple accent match */
+    color: #e61e1e; /* Red accent match */
 }
 
 /* The core loading entry bounce physics */
@@ -127,5 +135,12 @@ main {
     .footer-brand {
         font-size: 0.8rem;
         padding: 0.3rem 0.7rem;
+    }
+}
+
+@media (pointer: coarse) {
+    .about-card:hover {
+        transform: none;
+        box-shadow: none;
     }
 }

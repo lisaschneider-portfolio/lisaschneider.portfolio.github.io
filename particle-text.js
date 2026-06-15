@@ -9,7 +9,7 @@
   const TEXT = 'lisa schneider';
   const FONT_FAMILY = 'Caveat';
   const FONT_WEIGHT = 700;
-  const COLOR = '#e61e1e';
+  const COLOR = '#de1c1c';
   const PARTICLE_RADIUS = 2.2;
   const SCATTER_AMOUNT = 4;
   const REPULSION_RADIUS = 45;
