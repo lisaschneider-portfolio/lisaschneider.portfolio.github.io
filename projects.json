@@ -8,9 +8,9 @@
     "timeline": "2 Weeks",
     "tools": ["Illustrator", "InDesign"],
     "client": "Self-Initiated",
-    "heroImage": "assets/pictures/ikea-hero.jpg",
+    "heroImage": "assets/pictures/DDW.jpg",
     "process": "A classic Quartet game that aligns with IKEA’s core value of 'togetherness.'",
-    "processImages": ["assets/pictures/ikea-1.jpg", "assets/pictures/ikea-2.jpg"],
+    "processImages": ["assets/pictures/3D.jpg", "assets/pictures/germany.jpg"],
     "tags": ["Product Design", "System Thinking"]
   },
   "wie-gaat-eerst": {
@@ -31,7 +31,7 @@
       "assets/pictures/WGE_Instructions_1.png",
       "assets/pictures/WGE_Instructions_2.png",
       "assets/pictures/WGE_game_screen.png",
-      "assets/pictures/WGE_feedback_screen.png"
+      "assets/pictures/WGE_Feedback_screen.png"
     ],
     "tags": ["UX Research", "HealthTech", "System Thinking"]
   },
@@ -46,12 +46,12 @@
     "challenge": "Vistar Media wanted to increase adoption of Dynamic Creative Optimization in programmatic Digital Out-of-Home advertising. Initial research revealed that low adoption was not caused by a lack of technology, but by a communication gap. Marketers struggled to understand the creative value of DCO and were often overwhelmed by technical messaging. This reframed the challenge from promoting a product to changing perceptions: How might we make Dynamic Creative Optimization feel creatively empowering rather than technically intimidating?",
     "process": "Through stakeholder interviews, competitor analysis, audience research, journey mapping, and multiple rounds of prototype testing, I explored how marketers discover, evaluate, and adopt emerging advertising technologies. Early concepts focused heavily on technology and features, but testing revealed a preference for authentic, human-centered content. These insights led to an omnichannel strategy that leveraged LinkedIn for trust-building, DOOH for awareness, and Instagram Broadcast Channels for deeper engagement. The strategy was iteratively refined through feedback from both target users and industry experts.",
     "results": "Testing validated the overall strategy and confirmed that marketers respond more positively to authentic, educational content than traditional sales-driven messaging. LinkedIn emerged as the most influential channel for B2B decision-making, while Instagram Broadcast Channels were perceived as an innovative way to build ongoing engagement when paired with exclusive, high-value content. The final solution delivered a feasible six-month implementation roadmap, a complete omnichannel communication strategy, and an operational playbook that enabled Vistar Media to position itself as a creative-first leader in Dynamic Creative Optimization.",
-    "heroImage": "assets/pictures/vistar-hero.jpg",
+    "heroImage": "assets/pictures/soundscape_techno_ah.webp",
     "processImages": [   "assets/pictures/WGE_Level.png",
       "assets/pictures/WGE_Instructions_1.png",
       "assets/pictures/WGE_Instructions_2.png",
       "assets/pictures/WGE_game_screen.png",
-      "assets/pictures/WGE_feedback_screen.png"],
+      "assets/pictures/WGE_Feedback_screen.png"],
     "tags": ["UX Research", "B2B Marketing", "Strategic Design", "Graduation Thesis"]
   },
   "GezelligGo": {
@@ -65,12 +65,12 @@
     "challenge": "Vistar Media wanted to increase adoption of Dynamic Creative Optimization in programmatic Digital Out-of-Home advertising. Initial research revealed that low adoption was not caused by a lack of technology, but by a communication gap. Marketers struggled to understand the creative value of DCO and were often overwhelmed by technical messaging. This reframed the challenge from promoting a product to changing perceptions: How might we make Dynamic Creative Optimization feel creatively empowering rather than technically intimidating?",
     "process": "Through stakeholder interviews, competitor analysis, audience research, journey mapping, and multiple rounds of prototype testing, I explored how marketers discover, evaluate, and adopt emerging advertising technologies. Early concepts focused heavily on technology and features, but testing revealed a preference for authentic, human-centered content. These insights led to an omnichannel strategy that leveraged LinkedIn for trust-building, DOOH for awareness, and Instagram Broadcast Channels for deeper engagement. The strategy was iteratively refined through feedback from both target users and industry experts.",
     "results": "Testing validated the overall strategy and confirmed that marketers respond more positively to authentic, educational content than traditional sales-driven messaging. LinkedIn emerged as the most influential channel for B2B decision-making, while Instagram Broadcast Channels were perceived as an innovative way to build ongoing engagement when paired with exclusive, high-value content. The final solution delivered a feasible six-month implementation roadmap, a complete omnichannel communication strategy, and an operational playbook that enabled Vistar Media to position itself as a creative-first leader in Dynamic Creative Optimization.",
-    "heroImage": "assets/pictures/vistar-hero.jpg",
+    "heroImage": "assets/pictures/netherlands.jpg",
     "processImages": [   "assets/pictures/WGE_Level.png",
       "assets/pictures/WGE_Instructions_1.png",
       "assets/pictures/WGE_Instructions_2.png",
       "assets/pictures/WGE_game_screen.png",
-      "assets/pictures/WGE_feedback_screen.png"],
+      "assets/pictures/WGE_Feedback_screen.png"],
     "tags": ["UX Research", "B2B Marketing", "Strategic Design", "Graduation Thesis"]
   }
 }
