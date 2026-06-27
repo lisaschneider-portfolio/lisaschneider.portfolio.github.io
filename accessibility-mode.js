@@ -22,10 +22,12 @@
   }
 
   function initAccessibilityModeToggle() {
-    const button = document.querySelector('[data-wcag-toggle]');
-    if (!button || !document.body) return;
+    const buttons = Array.from(document.querySelectorAll('[data-wcag-toggle]'));
+    if (!buttons.length || !document.body) return;
 
-    const label = button.querySelector('[data-wcag-label]');
+    const labels = buttons.map(function (button) {
+      return button.querySelector('[data-wcag-label]');
+    });
 
     function applyMode(isEnabled) {
       if (isEnabled) {
@@ -33,11 +35,13 @@
       } else {
         document.body.removeAttribute(THEME_ATTRIBUTE);
       }
-      button.classList.toggle('is-active', isEnabled);
-      button.setAttribute('aria-pressed', String(isEnabled));
-      if (label) {
-        label.textContent = isEnabled ? 'WCAG mode: on' : 'WCAG mode: off';
-      }
+      buttons.forEach(function (button, index) {
+        button.classList.toggle('is-active', isEnabled);
+        button.setAttribute('aria-pressed', String(isEnabled));
+        if (labels[index]) {
+          labels[index].textContent = isEnabled ? 'WCAG mode: on' : 'WCAG mode: off';
+        }
+      });
     }
 
     function toggleAccessibleTheme() {
@@ -51,19 +55,43 @@
 
     window.toggleAccessibleTheme = toggleAccessibleTheme;
 
-    button.addEventListener('click', toggleAccessibleTheme);
+    buttons.forEach(function (button) {
+      button.addEventListener('click', toggleAccessibleTheme);
 
-    button.addEventListener('keydown', function (event) {
-      if (event.key === ' ' || event.key === 'Enter') {
-        event.preventDefault();
-        button.click();
-      }
+      button.addEventListener('keydown', function (event) {
+        if (event.key === ' ' || event.key === 'Enter') {
+          event.preventDefault();
+          button.click();
+        }
+      });
+    });
+  }
+
+  function initMobileNavigation() {
+    const menuToggles = Array.from(document.querySelectorAll('[data-mobile-menu-toggle]'));
+    if (!menuToggles.length) return;
+
+    menuToggles.forEach(function (toggle) {
+      const menuId = toggle.getAttribute('aria-controls');
+      if (!menuId) return;
+      const menu = document.getElementById(menuId);
+      if (!menu) return;
+
+      toggle.addEventListener('click', function () {
+        const expanded = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', String(!expanded));
+        menu.classList.toggle('hidden', expanded);
+      });
     });
   }
 
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initAccessibilityModeToggle);
+    document.addEventListener('DOMContentLoaded', function () {
+      initAccessibilityModeToggle();
+      initMobileNavigation();
+    });
   } else {
     initAccessibilityModeToggle();
+    initMobileNavigation();
   }
 })();

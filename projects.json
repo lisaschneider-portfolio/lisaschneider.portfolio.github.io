@@ -11,7 +11,7 @@
     "challenge": "Our project initially focused on reducing false alarms in Accident & Emergency departments. However, interviews with healthcare professionals revealed a deeper issue: nursing students often enter clinical environments without the experience-based mental models needed to confidently prioritize patients. How might we help nursing students develop decision-making confidence before entering high-pressure clinical settings?",
     "process": "We conducted interviews with healthcare professionals and analyzed the causes of stress and decision fatigue in emergency care environments. Using insights from cognitive load theory, we reframed the problem from 'reducing false alarms' to 'building resilience through practice.' We then designed a digital triage simulation that progressively exposes students to realistic emergency scenarios, helping them build pattern recognition and prioritization skills through repetition and feedback.",
     "results": "This project demonstrated the value of addressing the root causes of cognitive overload rather than its symptoms. By reframing the challenge from reducing false alarms to strengthening decision-making resilience, we created a simulation-based learning experience that helps nursing students develop the mental models required for effective patient prioritization. The concept was positively received by both students and healthcare professionals, highlighting the potential of preventative training interventions in preparing future nurses for the realities of emergency care.",
-    "heroImage": "assets/pictures/WGE_mockup.jpg",
+    "heroImage": "assets/pictures/WGE_Mockup.jpg",
     "processImages": [
       "assets/pictures/WGE_Level.png",
       "assets/pictures/WGE_Instructions_1.png",
@@ -32,12 +32,12 @@
     "challenge": "Vistar Media wanted to increase adoption of Dynamic Creative Optimization in programmatic Digital Out-of-Home advertising. Initial research revealed that low adoption was not caused by a lack of technology, but by a communication gap. Marketers struggled to understand the creative value of DCO and were often overwhelmed by technical messaging. This reframed the challenge from promoting a product to changing perceptions: How might we make Dynamic Creative Optimization feel creatively empowering rather than technically intimidating?",
     "process": "Through stakeholder interviews, competitor analysis, audience research, journey mapping, and multiple rounds of prototype testing, I explored how marketers discover, evaluate, and adopt emerging advertising technologies. Early concepts focused heavily on technology and features, but testing revealed a preference for authentic, human-centered content. These insights led to an omnichannel strategy that leveraged LinkedIn for trust-building, DOOH for awareness, and Instagram Broadcast Channels for deeper engagement. The strategy was iteratively refined through feedback from both target users and industry experts.",
     "results": "Testing validated the overall strategy and confirmed that marketers respond more positively to authentic, educational content than traditional sales-driven messaging. LinkedIn emerged as the most influential channel for B2B decision-making, while Instagram Broadcast Channels were perceived as an innovative way to build ongoing engagement when paired with exclusive, high-value content. The final solution delivered a feasible six-month implementation roadmap, a complete omnichannel communication strategy, and an operational playbook that enabled Vistar Media to position itself as a creative-first leader in Dynamic Creative Optimization.",
-    "heroImage": "assets/pictures/vistar_media_mockup.jpg",
+    "heroImage": "assets/pictures/Vistar_Media_mockup.jpg",
     "processImages": [ 
       "assets/pictures/Vistar_media_1.jpg",
-      "assets/pictures/Vistar_media_2.jpg",
-      "assets/pictures/Vistar_media_3.jpg",
-      "assets/pictures/Vistar_media_4.jpg"],
+      "assets/pictures/Vistar_Media_2.jpg",
+      "assets/pictures/Vistar_Media_3.jpg",
+      "assets/pictures/Vistar_Media_4.jpg"],
     "tags": ["UX Research", "B2B Marketing", "Strategic Design", "Graduation Thesis"]
   },
   "GezelligGo": {
@@ -54,7 +54,7 @@
     "heroImage": "assets/pictures/gezelliggo_mockup.jpg",
     "processImages": [  
       "assets/pictures/gezelliggo_1.jpg",
-      "assets/pictures/gezelliggo_2.jpg"],
+      "assets/pictures/Gezelliggo_2.jpg"],
     "tags": ["UX/UI Research","Strategic Design"]  },
   "ikea-kvartett": {
     "title": "IKEA Kvartett",
@@ -65,14 +65,14 @@
     "timeline": "2 Weeks",
     "tools": ["Illustrator", "InDesign"],
     "client": "Self-Initiated",
-    "heroImage": "assets/pictures/kvartett_ikea.jpg",
+    "heroImage": "assets/pictures/Kvartett_ikea.jpg",
     "process": "Starting from my own interest in gamification and behavioral design, I analyzed the IKEA shopping experience and identified opportunities to encourage exploration through play. I designed a collectible card system that translated IKEA products into game elements, defining categories, attributes, rarity levels, and visual hierarchies. Through several iterations, I refined the balance between gameplay and product information, ensuring the concept remained recognizably IKEA while introducing meaningful game mechanics such as themed collections, favorites, and collectible sets.",
     "results": "This self-initiated project demonstrates how gamification can transform a routine shopping trip into a more engaging and memorable experience. By combining familiar IKEA product information with collectible mechanics, the concept encourages customers to discover products they might otherwise overlook while reinforcing brand interaction. Beyond the final design, the project allowed me to explore behavioral design, information architecture, and interaction design in a playful retail context, showcasing my ability to independently identify opportunities and translate them into user-centered concepts.",
     "processImages": [
-      "assets/pictures/kvartett_ikea_1.jpg", 
-      "assets/pictures/kvartett_ikea_2.jpg",
-      "assets/pictures/kvartett_ikea_3.jpg",
-      "assets/pictures/kvartett_ikea_4.jpg"
+      "assets/pictures/Kvartett_ikea_1.jpg", 
+      "assets/pictures/Kvartett_ikea_2.jpg",
+      "assets/pictures/Kvartett_ikea_3.jpg",
+      "assets/pictures/Kvartett_ikea_4.jpg"
     ],
     "tags": ["Product Design", "System Thinking"]
   }
