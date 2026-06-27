@@ -47,7 +47,7 @@
                 <p class="text-stone-400 font-medium text-sm">Recent projects I am proud to have shaped</p>
             </div>
 
-            <div class="w-full max-w-2xl mx-auto flex justify-center items-center relative min-h-[320px] select-none overflow-visible" id="carousel-track"></div>
+            <div class="w-full max-w-4xl mx-auto flex justify-center items-center relative min-h-[440px] select-none overflow-visible" id="carousel-track"></div>
 
             <div class="pt-2 w-full flex justify-center px-4 sm:px-0">
                 <button id="project-action-button" class="carousel-cta inline-flex items-center justify-center min-h-[52px] w-full sm:w-auto px-6 py-4 bg-[#e61e1e] text-white rounded-2xl font-extrabold text-xs uppercase tracking-wider shadow-md hover:bg-[#ba1c1c] hover:shadow-lg transition-all duration-300 transform active:scale-95">
@@ -125,7 +125,7 @@
             projectData = projects.map(p => ({ id: p.id, title: p.title, url: `project-layout.html?id=${encodeURIComponent(p.id)}` }));
             projects.forEach((project, index) => {
                 const card = document.createElement('div');
-                card.className = 'fan-card absolute w-[320px] h-[240px] rounded-[2rem] shadow-[6px_6px_0px_0px_rgba(26,26,26,1)] overflow-hidden flex flex-col justify-end p-0 h-full origin-bottom cursor-pointer';
+                card.className = 'fan-card absolute w-[440px] h-[330px] rounded-[2rem] shadow-[6px_6px_0px_0px_rgba(26,26,26,1)] overflow-hidden flex flex-col justify-end p-0 h-full origin-bottom cursor-pointer';
                 card.innerHTML = `<div class="w-full h-[calc(100%-56px)] overflow-hidden relative rounded-t-[2rem]"><img src="${project.heroImage}" class="h-full w-full object-cover" /></div><div class="w-full bg-white px-4 py-3"><h3 class="text-sm font-black uppercase text-stone-900">${project.title}</h3></div>`;
                 card.addEventListener('click', () => {
                     activeIndex = index;
@@ -151,7 +151,7 @@
                 if (offset < -totalCards / 2) offset += totalCards;
                 const dOffset = offset - (dragOffset / 180);
                 card.style.zIndex = 30 - Math.round(Math.abs(dOffset) * 2);
-                card.style.transform = `translateX(${dOffset * 58}px) translateY(${Math.abs(dOffset) * 12}px) rotate(${dOffset * 9}deg) scale(${i === activeIndex ? 1 : 0.92})`;
+                card.style.transform = `translateX(${dOffset * 86}px) translateY(${Math.abs(dOffset) * 20}px) rotate(${dOffset * 9}deg) scale(${i === activeIndex ? 1 : 0.92})`;
             });
         }
 

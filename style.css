@@ -164,11 +164,93 @@ body[data-theme='accessible'] .about-card {
     box-shadow: 8px 8px 0 0 #ffffff;
 }
 
+body[data-theme='accessible'] .fan-card {
+    box-shadow: 6px 6px 0 0 #ffffff !important;
+}
+
+body[data-theme='accessible'] .fan-card h1,
+body[data-theme='accessible'] .fan-card h2,
+body[data-theme='accessible'] .fan-card h3,
+body[data-theme='accessible'] .fan-card p,
+body[data-theme='accessible'] .fan-card span,
+body[data-theme='accessible'] .fan-card div {
+    color: #1234db !important;
+}
+
+/* Keep project surfaces readable in accessible mode (white surface + blue text). */
+body[data-theme='accessible'] .project-card,
+body[data-theme='accessible'] #project-detail {
+    background: #ffffff !important;
+    border-color: #1234db !important;
+}
+
+body[data-theme='accessible'] .project-card {
+    box-shadow: 8px 8px 0 0 #ffffff !important;
+}
+
+body[data-theme='accessible'] .project-card:hover {
+    box-shadow: 12px 12px 0 0 #ffffff !important;
+}
+
+body[data-theme='accessible'] #project-image,
+body[data-theme='accessible'] #hero-image-wrapper {
+    box-shadow: 8px 8px 0 0 #ffffff !important;
+}
+
+body[data-theme='accessible'] #project-image,
+body[data-theme='accessible'] #hero-image-wrapper {
+    border-color: #1234db !important;
+}
+
+body[data-theme='accessible'] .project-card,
+body[data-theme='accessible'] .project-card *,
+body[data-theme='accessible'] #project-detail a {
+    text-decoration: none !important;
+}
+
+body[data-theme='accessible'] #cta-container a,
+body[data-theme='accessible'] #audio-button-container a,
+body[data-theme='accessible'] #project-detail a.bg-\[\#e61e1e\],
+body[data-theme='accessible'] #project-detail a.bg-\[\#1234db\] {
+    color: #ffffff !important;
+}
+
+body[data-theme='accessible'] .project-card h1,
+body[data-theme='accessible'] .project-card h2,
+body[data-theme='accessible'] .project-card h3,
+body[data-theme='accessible'] .project-card p,
+body[data-theme='accessible'] .project-card div,
+body[data-theme='accessible'] #project-detail h1,
+body[data-theme='accessible'] #project-detail h2,
+body[data-theme='accessible'] #project-detail h3,
+body[data-theme='accessible'] #project-detail p,
+body[data-theme='accessible'] #project-detail a,
+body[data-theme='accessible'] #project-detail li,
+body[data-theme='accessible'] #project-detail span,
+body[data-theme='accessible'] #project-detail div {
+    color: #1234db !important;
+}
+
+body[data-theme='accessible'] .project-card .project-tag,
+body[data-theme='accessible'] #project-tags span {
+    background: #1234db !important;
+    color: #ffffff !important;
+    border-color: #ffffff !important;
+    border-width: 2px !important;
+}
+
+body[data-theme='accessible'] .project-card .relative.h-72,
+body[data-theme='accessible'] #hero-image-wrapper,
+body[data-theme='accessible'] #process-gallery > div {
+    background: #ffffff !important;
+}
+
 
 body[data-theme='accessible'] .a11y-toggle {
     background: #ffffff;
     color: #1234db;
     border-color: #1234db;
+    box-shadow: 3px 3px 0 0 #ffffff;
 }
 
 body[data-theme='accessible'] .a11y-switch-track {
@@ -186,126 +268,6 @@ body[data-theme='accessible'] *::after {
     animation: none !important;
     transition: none !important;
     scroll-behavior: auto !important;
-}
-
-/* Scope alternate accessible colors to project and sidequest pages only. */
-body[data-theme='accessible'].page-projects-overview,
-body[data-theme='accessible'].page-project-detail,
-body[data-theme='accessible'].page-sidequests-overview,
-body[data-theme='accessible'].page-sidequest-detail {
-    background-color: #ffffff !important;
-    color: #1234db !important;
-}
-
-body[data-theme='accessible'].page-projects-overview h1,
-body[data-theme='accessible'].page-projects-overview h2,
-body[data-theme='accessible'].page-projects-overview h3,
-body[data-theme='accessible'].page-projects-overview h4,
-body[data-theme='accessible'].page-projects-overview h5,
-body[data-theme='accessible'].page-projects-overview h6,
-body[data-theme='accessible'].page-project-detail h1,
-body[data-theme='accessible'].page-project-detail h2,
-body[data-theme='accessible'].page-project-detail h3,
-body[data-theme='accessible'].page-project-detail h4,
-body[data-theme='accessible'].page-project-detail h5,
-body[data-theme='accessible'].page-project-detail h6,
-body[data-theme='accessible'].page-sidequests-overview h1,
-body[data-theme='accessible'].page-sidequests-overview h2,
-body[data-theme='accessible'].page-sidequests-overview h3,
-body[data-theme='accessible'].page-sidequests-overview h4,
-body[data-theme='accessible'].page-sidequests-overview h5,
-body[data-theme='accessible'].page-sidequests-overview h6,
-body[data-theme='accessible'].page-sidequest-detail h1,
-body[data-theme='accessible'].page-sidequest-detail h2,
-body[data-theme='accessible'].page-sidequest-detail h3,
-body[data-theme='accessible'].page-sidequest-detail h4,
-body[data-theme='accessible'].page-sidequest-detail h5,
-body[data-theme='accessible'].page-sidequest-detail h6 {
-    color: #1234db !important;
-}
-
-body[data-theme='accessible'].page-projects-overview p,
-body[data-theme='accessible'].page-projects-overview li,
-body[data-theme='accessible'].page-projects-overview a,
-body[data-theme='accessible'].page-projects-overview button,
-body[data-theme='accessible'].page-projects-overview input,
-body[data-theme='accessible'].page-projects-overview textarea,
-body[data-theme='accessible'].page-projects-overview label,
-body[data-theme='accessible'].page-projects-overview span,
-body[data-theme='accessible'].page-projects-overview div,
-body[data-theme='accessible'].page-project-detail p,
-body[data-theme='accessible'].page-project-detail li,
-body[data-theme='accessible'].page-project-detail a,
-body[data-theme='accessible'].page-project-detail button,
-body[data-theme='accessible'].page-project-detail input,
-body[data-theme='accessible'].page-project-detail textarea,
-body[data-theme='accessible'].page-project-detail label,
-body[data-theme='accessible'].page-project-detail span,
-body[data-theme='accessible'].page-project-detail div,
-body[data-theme='accessible'].page-sidequests-overview p,
-body[data-theme='accessible'].page-sidequests-overview li,
-body[data-theme='accessible'].page-sidequests-overview a,
-body[data-theme='accessible'].page-sidequests-overview button,
-body[data-theme='accessible'].page-sidequests-overview input,
-body[data-theme='accessible'].page-sidequests-overview textarea,
-body[data-theme='accessible'].page-sidequests-overview label,
-body[data-theme='accessible'].page-sidequests-overview span,
-body[data-theme='accessible'].page-sidequests-overview div,
-body[data-theme='accessible'].page-sidequest-detail p,
-body[data-theme='accessible'].page-sidequest-detail li,
-body[data-theme='accessible'].page-sidequest-detail a,
-body[data-theme='accessible'].page-sidequest-detail button,
-body[data-theme='accessible'].page-sidequest-detail input,
-body[data-theme='accessible'].page-sidequest-detail textarea,
-body[data-theme='accessible'].page-sidequest-detail label,
-body[data-theme='accessible'].page-sidequest-detail span,
-body[data-theme='accessible'].page-sidequest-detail div {
-    color: #1234db !important;
-}
-
-body[data-theme='accessible'].page-projects-overview [class*="text-stone-"],
-body[data-theme='accessible'].page-projects-overview [class*="text-gray-"],
-body[data-theme='accessible'].page-projects-overview [class*="text-zinc-"],
-body[data-theme='accessible'].page-project-detail [class*="text-stone-"],
-body[data-theme='accessible'].page-project-detail [class*="text-gray-"],
-body[data-theme='accessible'].page-project-detail [class*="text-zinc-"],
-body[data-theme='accessible'].page-sidequests-overview [class*="text-stone-"],
-body[data-theme='accessible'].page-sidequests-overview [class*="text-gray-"],
-body[data-theme='accessible'].page-sidequests-overview [class*="text-zinc-"],
-body[data-theme='accessible'].page-sidequest-detail [class*="text-stone-"],
-body[data-theme='accessible'].page-sidequest-detail [class*="text-gray-"],
-body[data-theme='accessible'].page-sidequest-detail [class*="text-zinc-"] {
-    color: #1234db !important;
-}
-
-body[data-theme='accessible'].page-projects-overview [class*="bg-stone-"],
-body[data-theme='accessible'].page-projects-overview [class*="bg-gray-"],
-body[data-theme='accessible'].page-projects-overview [class*="bg-#"],
-body[data-theme='accessible'].page-projects-overview [class*="bg-["],
-body[data-theme='accessible'].page-project-detail [class*="bg-stone-"],
-body[data-theme='accessible'].page-project-detail [class*="bg-gray-"],
-body[data-theme='accessible'].page-project-detail [class*="bg-#"],
-body[data-theme='accessible'].page-project-detail [class*="bg-["],
-body[data-theme='accessible'].page-sidequests-overview [class*="bg-stone-"],
-body[data-theme='accessible'].page-sidequests-overview [class*="bg-gray-"],
-body[data-theme='accessible'].page-sidequests-overview [class*="bg-#"],
-body[data-theme='accessible'].page-sidequests-overview [class*="bg-["],
-body[data-theme='accessible'].page-sidequest-detail [class*="bg-stone-"],
-body[data-theme='accessible'].page-sidequest-detail [class*="bg-gray-"],
-body[data-theme='accessible'].page-sidequest-detail [class*="bg-#"],
-body[data-theme='accessible'].page-sidequest-detail [class*="bg-["] {
-    background-color: #ffffff !important;
-}
-
-body[data-theme='accessible'].page-projects-overview .project-tag,
-body[data-theme='accessible'].page-project-detail .project-tag,
-body[data-theme='accessible'].page-sidequests-overview .project-tag,
-body[data-theme='accessible'].page-sidequest-detail .project-tag,
-body[data-theme='accessible'].page-project-detail #project-tags span,
-body[data-theme='accessible'].page-sidequest-detail #project-tags span {
-    background: #1234db !important;
-    color: #ffffff !important;
-    border: 2px solid #ffffff !important;
 }
 
 #projects {
