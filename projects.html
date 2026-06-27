@@ -20,14 +20,14 @@
             box-shadow: 12px 12px 0 0 #1a1a1a;
         }
         .project-tag {
-            background: #fdecec;
-            color: #e61e1e;
+            background: #dcfce7;
+            color: #16a34a;
             padding: 4px 12px;
             border-radius: 999px;
             font-size: 0.65rem;
             font-weight: 700;
             letter-spacing: 0.02em;
-            border: 1.5px solid #e61e1e;
+            border: 1.5px solid #16a34a;
         }
     </style>
 </head>
@@ -73,7 +73,7 @@
         </section>
 
         <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto pb-20"></div>
-        <div id="projects-error" class="hidden rounded-3xl border border-red-200 bg-red-50 p-6 text-red-800 max-w-4xl mx-auto mb-10">Could not load projects. Please check your JSON file and refresh.</div>
+        <div id="projects-error" class="hidden rounded-3xl border border-green-200 bg-green-50 p-6 text-green-800 max-w-4xl mx-auto mb-10">Could not load projects. Please check your JSON file and refresh.</div>
 
         <!-- Back link -->
         <div class="text-center pb-16">
@@ -121,7 +121,7 @@
                         ${(project.tags || []).map(tag => `<span class="project-tag">${tag}</span>`).join('')}
                     </div>
                     <h3 class="text-xl font-black tracking-tight uppercase">${project.title || 'Untitled Project'}</h3>
-                    <div class="pt-2 flex items-center gap-2 text-[#e61e1e] font-extrabold text-xs uppercase tracking-wider group-hover:gap-3 transition-all">
+                    <div class="pt-2 flex items-center gap-2 text-[#16a34a] font-extrabold text-xs uppercase tracking-wider group-hover:gap-3 transition-all">
                         View Project
                         <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
                     </div>

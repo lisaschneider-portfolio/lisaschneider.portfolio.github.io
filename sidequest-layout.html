@@ -51,7 +51,7 @@
             Back to side quests
         </a>
 
-        <div id="project-not-found" class="hidden rounded-[2rem] border border-red-200 bg-red-50 p-10 text-red-800 shadow-sm">
+        <div id="project-not-found" class="hidden rounded-[2rem] border border-green-200 bg-green-50 p-10 text-green-800 shadow-sm">
             Side quest not found. Check the side quest ID in the URL and try again.
         </div>
 
@@ -193,7 +193,7 @@
             tagsElement.innerHTML = '';
             (project.tags || []).forEach(tag => {
                 const tagItem = document.createElement('span');
-                tagItem.className = 'bg-[#fdecec] text-[#e61e1e] px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-[0.28em]';
+                tagItem.className = 'bg-[#dcfce7] text-[#16a34a] px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-[0.28em]';
                 tagItem.textContent = tag;
                 tagsElement.appendChild(tagItem);
             });
@@ -218,7 +218,7 @@
             }
 
             if (project.audioUrl) {
-                audioButtonContainer.innerHTML = `<a href="${project.audioUrl}" target="_blank" class="inline-flex items-center gap-2 bg-[#e61e1e] text-white px-8 py-4 rounded-full font-bold hover:bg-[#c01919] transition-colors shadow-[4px_4px_0_0_#1a1a1a]">Listen to audio</a>`;
+                audioButtonContainer.innerHTML = `<a href="${project.audioUrl}" target="_blank" class="inline-flex items-center gap-2 bg-[#16a34a] text-white px-8 py-4 rounded-full font-bold hover:bg-[#166534] transition-colors shadow-[4px_4px_0_0_#1a1a1a]">Listen to audio</a>`;
             } else {
                 audioButtonContainer.innerHTML = '';
             }

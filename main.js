@@ -67,7 +67,7 @@ if (project.researchDocuments) {
 const ctaContainer = document.getElementById('cta-container'); // Make sure this div exists in your HTML!
 if (project.figmaUrl && ctaContainer) {
     ctaContainer.innerHTML = `
-        <a href="${project.figmaUrl}" target="_blank" class="inline-flex items-center gap-2 bg-[#1a1a1a] text-white px-8 py-4 rounded-full font-bold hover:bg-[#e61e1e] transition-colors">
+        <a href="${project.figmaUrl}" target="_blank" class="inline-flex items-center gap-2 bg-[#1a1a1a] text-white px-8 py-4 rounded-full font-bold hover:bg-[#16a34a] transition-colors">
             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M15 12h-2v2h2v-2zM12 9h-2v2h2V9zM9 12H7v2h2v-2zM12 15h-2v2h2v-2zM15 6h-2v2h2V6zM12 3H9v3h3V3zM9 6H6v3h3V6zM6 9H3v3h3V9zM9 12H6v3h3v-3zM12 12h-2v2h2v-2zM12 18h3v-3h-3v3zM15 18h3v-3h-3v3zM18 12h3v-3h-3v3zM18 15h3v-3h-3v3z"/></svg>
             View Figma Prototype
         </a>

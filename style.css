@@ -62,14 +62,14 @@ body {
 }
 
 .a11y-toggle.is-active {
-    background: #fdecec;
-    border-color: #a40000;
-    color: #7a0000;
+    background: #dcfce7;
+    border-color: #166534;
+    color: #14532d;
 }
 
 .a11y-toggle.is-active .a11y-switch-track {
-    background: #e61e1e;
-    border-color: #a40000;
+    background: #16a34a;
+    border-color: #166534;
 }
 
 .a11y-toggle.is-active .a11y-switch-thumb {
@@ -166,6 +166,7 @@ body[data-theme='accessible'] .about-card {
 
 body[data-theme='accessible'] .fan-card {
     box-shadow: 6px 6px 0 0 #ffffff !important;
+    border: 2px solid #1234db !important;
 }
 
 body[data-theme='accessible'] .fan-card h1,
@@ -210,7 +211,7 @@ body[data-theme='accessible'] #project-detail a {
 
 body[data-theme='accessible'] #cta-container a,
 body[data-theme='accessible'] #audio-button-container a,
-body[data-theme='accessible'] #project-detail a.bg-\[\#e61e1e\],
+body[data-theme='accessible'] #project-detail a.bg-\[\#16a34a\],
 body[data-theme='accessible'] #project-detail a.bg-\[\#1234db\] {
     color: #ffffff !important;
 }
@@ -262,6 +263,16 @@ body[data-theme='accessible'] .a11y-switch-thumb {
     background: #1234db;
 }
 
+body[data-theme='accessible'] [data-mobile-menu-toggle],
+body[data-theme='accessible'] [id^='mobile-nav-menu-'] {
+    border-color: #ffffff !important;
+}
+
+body[data-theme='accessible'] [id^='mobile-nav-menu-'] a {
+    color: #1234db !important;
+    text-decoration: none !important;
+}
+
 body[data-theme='accessible'] *,
 body[data-theme='accessible'] *::before,
 body[data-theme='accessible'] *::after {
@@ -308,7 +319,7 @@ nav.grid.grid-cols-3 a {
     border-radius: 9999px;
     border: 1px solid #1a1a1a;
     background-color: #f9f7f2;
-    color: #e61e1e;
+    color: #16a34a;
     text-transform: lowercase;
     letter-spacing: 0.04em;
     font-size: 0.9rem;
@@ -326,7 +337,7 @@ nav.grid.grid-cols-3 a {
 /* Retrigger a quick tactical hop on cursor hover */
 .hover-jump:hover {
     transform: translateY(-8px) scale(1.1);
-    color: #e61e1e; /* Red accent match */
+    color: #16a34a; /* Green accent match */
 }
 
 /* The core loading entry bounce physics */

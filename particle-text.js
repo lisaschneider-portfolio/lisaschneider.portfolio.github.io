@@ -9,7 +9,7 @@
   const TEXT = 'lisa schneider';
   const FONT_FAMILY = 'Caveat';
   const FONT_WEIGHT = 700;
-  const COLOR = '#de1c1c';
+  const COLOR = '#16a34a';
   const ACCESSIBLE_COLOR = '#ffffff';
   const PARTICLE_RADIUS = 2.2;
   const SCATTER_AMOUNT = 4;
@@ -127,7 +127,7 @@
       friction: 0.02,
       restitution: 0.55,
       density: 0.0011,
-      render: { fillStyle: '#de1c1c' }
+      render: { fillStyle: '#16a34a' }
     });
   }
 
