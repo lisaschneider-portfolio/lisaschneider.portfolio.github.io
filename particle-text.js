@@ -1,5 +1,5 @@
 /**
- * Particle Text Effect — "lisa schneider"
+ * Particle Text Effect - "lisa schneider"
  * Renders cursive text as scattered particles with mouse repulsion physics.
  */
 

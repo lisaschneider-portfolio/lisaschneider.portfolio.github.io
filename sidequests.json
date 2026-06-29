@@ -1,64 +1,80 @@
 {
   "sidequest-1": {
      "title": "Welcome to the jungle",
-    "subtitle": "Using projection mapping to make art history accessible and interactive.",
-    "role": "Creative Director & Designer",
-    "description": "A group of friends enters the museum and heads straight for the most famous paintings, probably because they recognize them. None of the paintings have any descriptions, assuming everyone already knows about them. However, their attention shifts when they stumble upon an unfamiliar picture of a jungle. They take their time studying it, letting their imagination run wild as they try to figure out what the painting might be about. As the story progresses, the elements in the painting come to life, and things that were only imagined start happening inside the picture. The entire group is captivated and inspired to come up with their own interpretations. Encouraged by this fascinating experience, they continue their museum journey to the next unknown painting, undeterred by the absence of a description.",
-    "challenge": "The challenge was to create an interactive experience that would engage museum visitors and make art history more accessible. The goal was to use projection mapping to bring the paintings to life and create a sense of wonder and curiosity.",
+    "subtitle": "An immersive installation that transforms a static canvas into a dynamic narrative window, encouraging viewers to connect with art beyond its context.",
+    "role": "Creative Research & Designer",
+    "description": "The installation utilizes projection mapping on an existing canvas to animate a story, blending traditional art with digital narration. The project aims to combat the disconnect often felt in museums, where a lack of context can hinder visitor engagement. By bringing the painting to life through audio and movement, the installation invites viewers to use their imagination and actively participate in the artistic experience.",
+    "challenge": "Visitors often find it difficult to appreciate museum art when there is no context or description provided, leading to a lack of connection with the piece. The primary challenge was to bridge this gap by creating an immersive experience that encourages viewers to engage with unfamiliar art, even when they lack background information on the artist or the painting’s history.",
     "timeline": "1 Month",
-    "tools": "Mad Mapper, Photoshop, After Effects",
+    "tools": "Mad Mapper, Photoshop, After Effects, Ableton Live",
     "client": "Minor Audio & Visual Design",
     "imagePath": "assets/pictures/Window_into_a_world_1.png",
+    "heroVideoPath": "assets/videos/Window_into_a_world_3.mp4",
     "videoPath": "",
-    "process": "Mad Mapper, Photoshop, After Effects",
-    "processImages": [
-      "assets/pictures/Window_into_a_world_1.png",
-      "assets/pictures/Window_into_a_world_1.png",
-      "assets/pictures/Window_into_a_world_1.png",
-      "assets/pictures/Window_into_a_world_1.png"
-    ],
-    "tags": ["Projection Mapping", "Interaction Design"]
-  },
-  "sidequest-2": {
-      "title": "Techno Albert Heijn",
-    "subtitle": "Using projection mapping to make art history accessible and interactive.",
-    "audioUrl": "assets/videos/Soundscape.mp3",
-    "role": "Creative Director & Designer",
-    "description": "A group of friends enters the museum and heads straight for the most famous paintings, probably because they recognize them. None of the paintings have any descriptions, assuming everyone already knows about them. However, their attention shifts when they stumble upon an unfamiliar picture of a jungle. They take their time studying it, letting their imagination run wild as they try to figure out what the painting might be about. As the story progresses, the elements in the painting come to life, and things that were only imagined start happening inside the picture. The entire group is captivated and inspired to come up with their own interpretations. Encouraged by this fascinating experience, they continue their museum journey to the next unknown painting, undeterred by the absence of a description.",
-    "challenge": "The challenge was to create an interactive experience that would engage museum visitors and make art history more accessible. The goal was to use projection mapping to bring the paintings to life and create a sense of wonder and curiosity.",
-    "timeline": "1 Month",
-    "tools": "Ableton Live",
-    "client": "Minor Audio & Visual Design",
-    "imagePath": "assets/pictures/soundscape_techno_ah.webp",
-    "videoPath": "",
-    "process": "Mad Mapper, Photoshop, After Effects",
-    "figmaUrl": "https://techno-albert-heijn.figma.site",
-    "processImages": [
-      "assets/pictures/soundscape.JPG"
+    "processVideos": [
+      "assets/videos/Window_into_a_world_1.mp4"
 
     ],
-    "results": "The project successfully engaged museum visitors, sparking curiosity and encouraging them to explore the paintings in a new way. The projection mapping brought the artwork to life, creating an immersive experience that left a lasting impression on the audience.", 
-    "tags": ["Audio Design"]
+    "process": "My process began with digital research, drawing inspiration from projection mapping artists on Behance and TikTok. To animate the static image, I deconstructed the painting in Photoshop, creating distinct layers for elements like plants to ensure fluid movement. I experimented with narrative techniques, integrating ambient jungle sounds and constructing a physical museum scene around the canvas. Following feedback from a Mini-Expo that highlighted the need for a stronger, clearer storyline, I refined the project by developing a narrative centered on a group of friends visiting a museum, allowing the audience to follow their journey through the visuals and audio.",
+    "processImages": [
+      "assets/pictures/Window_into_a_world_1.png",
+      "assets/pictures/Window_into_a_world_2.png"
+    ],
+    "tags": ["Projection Mapping", "Interaction Design"],
+
+    "results": "The final installation successfully creates an immersive environment where the painted elements come to life, effectively captivating the audience and inspiring them to create their own interpretations of the art. By demonstrating that stories can be told through movement and audio in the absence of traditional descriptions, the project encourages museum-goers to continue exploring unfamiliar art with confidence." 
+  },
+  "sidequest-2": {
+      "title": "Borderland Subversion",
+    "subtitle": "An immersive art installation challenging perspectives on immigration and the manipulative nature of contextual information.",
+    "role": "Creative Research, Concept Development and Design",
+    "description": "Borderland Subversion is an impactful art installation inspired by Carlos Barrias's photograph of Maria Hernandez’s immigration journey. The work explores the emotional separation of families and the systemic challenges faced by those seeking a better life. By using a symbolic curtain as a border wall and immersive light projections, the installation forces viewers to confront how selectively displayed information, and the idea that the grass is always greener on the other side, can manipulate our moral choices and assumptions about immigration.",
+    "challenge": "The core challenge was to prompt viewers to reflect on their own biases regarding immigration while highlighting how information can be misleading when presented out of context. Inspired by the philosophical trolley problem, the goal was to avoid creating a good or bad side, instead forcing participants to grapple with the difficulty of resolving moral dilemmas. We aimed to move beyond static observation and create an environment where the audience’s own decision to engage with the other side revealed their internal reliance on manipulated narratives.",
+    "timeline": "3 Months",
+    "tools": "Photoshop, After Effects, MadMapper",
+    "client": "Minor Audio & Visual Design",
+    "imagePath": "assets/pictures/borderland_subversion.jpg",
+    "heroVideoPath": "assets/videos/Borderland_subversion_4.mp4",
+    "videoPath": "",
+    "process": "Our process was highly iterative, beginning with broad creative research using the 2023 World Press Photo contest as a foundation to identify themes of displacement and trauma. We moved from initial abstract concepts involving the trolley problem to a concrete, anchored narrative based on the real-life journey of Maria Hernandez. Throughout the seven-week project, we developed five distinct prototypes; each stage involved significant physical and digital testing, such as simulating the exhibition space with scale models and exploring spatial layouts using curtains and projectors. We learned to adapt our vision to physical constraints, such as shifting from a door-based concept to a curtain-gap design, and we utilized MadMapper to project animated paths that guided visitors through the space. We also made the intentional choice to exclude audio, concluding after testing that the visual and textual elements were powerful enough on their own and that sound would have been a distracting, unnecessary addition.",
+    "processImages": [
+      "assets/pictures/Borderland_subversion_6.png",
+      "assets/pictures/Borderland_subversion_7.png"
+    ],
+    "processVideos": [
+      "assets/videos/Borderland_subversion_8.mp4",
+      "assets/videos/Borderland_subversion_7.mp4",
+      "assets/videos/Borderland_subversion_5.mp4",
+      "assets/videos/Borderland_subversion_6.mp4"
+
+    ],
+    "processImages1": [
+      "assets/pictures/Borderland_subversion_5.jpg",
+      "assets/pictures/Borderland_subversion_4.png"
+    ],
+
+    "results": "The final installation successfully realized our vision of a two-sided, immersive experience that uses contrasting colors, orange and blue, to represent two worlds without imposing moral judgment. By guiding visitors through a curtain gap using animated zipper and stripe effects, the installation compelled them to physically move between perspectives, mirroring the difficult choices faced by migrants. Feedback from the final exhibition indicated that the concept was clear and effective, confirming that the simplicity of the design was one of its greatest strengths. The project achieved its primary goal: prompting visitors to contemplate how easily their choices are influenced by context and leaving them with a deeper, more critical understanding of the complex, systemic, and emotional realities of emigration.", 
+    "tags": ["Projection Mapping", "Immersive Art Installation", "Interaction Design"]
   },
    "sidequest-3": {
       "title": "Techno Albert Heijn",
-    "subtitle": "Using projection mapping to make art history accessible and interactive.",
+    "subtitle": "An audio piece that mixes the everyday sounds of an Albert Heijn grocery store with the atmosphere of a techno club.",
     "audioUrl": "assets/videos/Soundscape.mp3",
     "role": "Creative Director & Designer",
-    "description": "A group of friends enters the museum and heads straight for the most famous paintings, probably because they recognize them. None of the paintings have any descriptions, assuming everyone already knows about them. However, their attention shifts when they stumble upon an unfamiliar picture of a jungle. They take their time studying it, letting their imagination run wild as they try to figure out what the painting might be about. As the story progresses, the elements in the painting come to life, and things that were only imagined start happening inside the picture. The entire group is captivated and inspired to come up with their own interpretations. Encouraged by this fascinating experience, they continue their museum journey to the next unknown painting, undeterred by the absence of a description.",
-    "challenge": "The challenge was to create an interactive experience that would engage museum visitors and make art history more accessible. The goal was to use projection mapping to bring the paintings to life and create a sense of wonder and curiosity.",
+    "description": "This project turns boring grocery shopping into an club experience. By combining sounds like checkout beeps and rattling carts with deep, thumping techno beats, I created a unique soundscape that shows how ordinary places can sound extraordinary.",
+    "challenge": "The main challenge was mixing two very different worlds without making the audio sound messy. In my first draft, the techno beats were too loud, which made the grocery store sounds hard to hear and caused the different layers to clash with each other.",
     "timeline": "1 Month",
     "tools": "Ableton Live",
     "client": "Minor Audio & Visual Design",
     "imagePath": "assets/pictures/soundscape_techno_ah.webp",
     "videoPath": "",
-    "process": "Mad Mapper, Photoshop, After Effects",
+    "process": "I started by gathering sounds from a grocery store, a club, and online libraries. I also used AI to create realistic voices to tell the story. I used Ableton Live to put it all together, originally planning a store walkthrough before changing the story to focus on the experience of shopping and paying. After getting feedback, I used a technique called sidechaining to fix the mix. This helped the background sounds sit better in the music and made the whole piece feel much smoother.",
     "figmaUrl": "https://techno-albert-heijn.figma.site",
     "processImages": [
       "assets/pictures/soundscape.JPG"
 
     ],
-    "results": "The project successfully engaged museum visitors, sparking curiosity and encouraging them to explore the paintings in a new way. The projection mapping brought the artwork to life, creating an immersive experience that left a lasting impression on the audience.", 
+    "results": "The final result is an immersive audio piece that successfully turns a shopping trip into an underground party. I learned a lot about audio tools like auto-filters and sidechaining to change how sounds feel. This project taught me how to tell a story and create specific moods just by using sound.", 
     "tags": ["Audio Design"]
   }
 }

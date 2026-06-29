@@ -242,8 +242,12 @@ body[data-theme='accessible'] #project-tags span {
 
 body[data-theme='accessible'] .project-card .relative.h-72,
 body[data-theme='accessible'] #hero-image-wrapper,
-body[data-theme='accessible'] #process-gallery > div {
-    background: #ffffff !important;
+body[data-theme='accessible'] #process-gallery > div,
+body[data-theme='accessible'] #process-video-gallery > div,
+body[data-theme='accessible'] #hero-video-block,
+body[data-theme='accessible'] #project-image,
+body[data-theme='accessible'] #project-detail video {
+    background: transparent !important;
 }
 
 
@@ -266,6 +270,14 @@ body[data-theme='accessible'] .a11y-switch-thumb {
 body[data-theme='accessible'] [data-mobile-menu-toggle],
 body[data-theme='accessible'] [id^='mobile-nav-menu-'] {
     border-color: #ffffff !important;
+}
+
+body[data-theme='accessible'] #carousel-prev,
+body[data-theme='accessible'] #carousel-next {
+    background: #ffffff !important;
+    color: #1234db !important;
+    border-color: #1234db !important;
+    box-shadow: 3px 3px 0 0 #ffffff !important;
 }
 
 body[data-theme='accessible'] [id^='mobile-nav-menu-'] a {

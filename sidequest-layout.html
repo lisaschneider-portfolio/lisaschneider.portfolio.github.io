@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Side Quest Detail – Lisa Schneider</title>
+    <title>Side Quest Detail - Lisa Schneider</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -75,6 +75,13 @@
                     </div>
                 </div>
 
+                <div id="hero-video-block" class="hidden border-2 border-dashed border-gray-300 p-4 rounded-3xl bg-stone-50">
+                    <video id="hero-video" controls playsinline class="w-full h-auto rounded-2xl border border-stone-200 bg-black" preload="metadata">
+                        <source id="hero-video-source" src="" type="video/mp4" />
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+
                 <div class="grid gap-10">
                     <div class="space-y-4">
                         <h2 class="text-2xl font-black tracking-tight uppercase">Overview</h2>
@@ -113,9 +120,13 @@
 
                     <div id="process-gallery" class="grid grid-cols-1 md:grid-cols-2 gap-4"></div>
 
+                    <div id="process-video-gallery" class="hidden grid grid-cols-1 md:grid-cols-2 gap-4"></div>
+
+                    <div id="process-gallery-after-videos" class="hidden grid grid-cols-1 md:grid-cols-2 gap-4"></div>
+
                     <div class="space-y-4">
                         <h2 class="text-2xl font-black tracking-tight uppercase">Results</h2>
-                        <p id="project-results" class="text-stone-700 leading-relaxed">The final outcome is both visual and strategic — a project that feels polished, usable, and memorable.</p>
+                        <p id="project-results" class="text-stone-700 leading-relaxed">The final outcome is both visual and strategic - a project that feels polished, usable, and memorable.</p>
                     </div>
                 </div>
             </div>
@@ -129,12 +140,6 @@
 
     <script src="particle-text.js"></script>
     <script src="accessibility-mode.js"></script>
-    <div id="video-container" class="hidden my-6">
-        <video id="local-video" controls class="w-full rounded-lg">
-            <source src="" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-    </div>
     <footer class="w-full py-12 flex flex-col items-center space-y-1 border-t border-stone-200/40">
         <div class="footer-brand text-center text-stone-800 select-none">
             lisa schneider
@@ -160,11 +165,13 @@
         const resultsElement = document.getElementById('project-results');
         const tagsElement = document.getElementById('project-tags');
         const processGallery = document.getElementById('process-gallery');
+        const processVideoGallery = document.getElementById('process-video-gallery');
+        const processGalleryAfterVideos = document.getElementById('process-gallery-after-videos');
         const heroPlaceholder = document.getElementById('hero-image-placeholder');
+        const heroVideoBlock = document.getElementById('hero-video-block');
+        const heroVideo = document.getElementById('hero-video');
+        const heroVideoSource = document.getElementById('hero-video-source');
         const audioButtonContainer = document.getElementById('audio-button-container');
-        const videoContainer = document.getElementById('video-container');
-        const videoPlayer = document.getElementById('local-video');
-        const videoSource = videoPlayer.querySelector('source');
 
         function normalizeProjects(data) {
             if (Array.isArray(data)) {
@@ -188,7 +195,7 @@
             descriptionElement.textContent = project.description || 'Quest overview content goes here.';
             challengeElement.textContent = project.challenge || '';
             processElement.textContent = project.process || 'A clean, thoughtful process is the core of every case study. I captured challenges, research, and outcomes with the same attention to detail as the project design.';
-            resultsElement.textContent = project.results || 'The final outcome is both visual and strategic — a project that feels polished, usable, and memorable.';
+            resultsElement.textContent = project.results || 'The final outcome is both visual and strategic - a project that feels polished, usable, and memorable.';
 
             tagsElement.innerHTML = '';
             (project.tags || []).forEach(tag => {
@@ -217,18 +224,20 @@
                 challengeElement.parentElement.classList.remove('hidden');
             }
 
+            const heroVideoSrc = project.heroVideoPath || '';
+            if (heroVideoSrc) {
+                heroVideoSource.src = heroVideoSrc;
+                heroVideo.load();
+                heroVideoBlock.classList.remove('hidden');
+            } else {
+                heroVideoSource.src = '';
+                heroVideoBlock.classList.add('hidden');
+            }
+
             if (project.audioUrl) {
                 audioButtonContainer.innerHTML = `<a href="${project.audioUrl}" target="_blank" class="inline-flex items-center gap-2 bg-[#16a34a] text-white px-8 py-4 rounded-full font-bold hover:bg-[#166534] transition-colors shadow-[4px_4px_0_0_#1a1a1a]">Listen to audio</a>`;
             } else {
                 audioButtonContainer.innerHTML = '';
-            }
-
-            if (project.videoPath) {
-                videoSource.src = project.videoPath;
-                videoPlayer.load();
-                videoContainer.classList.remove('hidden');
-            } else {
-                videoContainer.classList.add('hidden');
             }
 
             processGallery.innerHTML = '';
@@ -246,6 +255,43 @@
                         No process images available for this side quest yet.
                     </div>
                 `;
+            }
+
+            processVideoGallery.innerHTML = '';
+            const processVideos = (project.processVideos || []).filter(Boolean);
+            if (project.videoPath) {
+                processVideos.push(project.videoPath);
+            }
+
+            if (processVideos.length) {
+                processVideos.forEach(videoUrl => {
+                    processVideoGallery.innerHTML += `
+                        <div class="border-2 border-dashed border-gray-300 p-4 rounded-3xl bg-stone-50">
+                            <video controls playsinline class="w-full h-auto rounded-2xl border border-stone-200 bg-black" preload="metadata">
+                                <source src="${videoUrl}" type="video/mp4" />
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    `;
+                });
+                processVideoGallery.classList.remove('hidden');
+            } else {
+                processVideoGallery.classList.add('hidden');
+            }
+
+            processGalleryAfterVideos.innerHTML = '';
+            const trailingProcessImages = (project.processImages1 || []).filter(Boolean);
+            if (trailingProcessImages.length) {
+                trailingProcessImages.forEach(imgUrl => {
+                    processGalleryAfterVideos.innerHTML += `
+                        <div class="border-2 border-dashed border-gray-300 p-4 rounded-3xl bg-stone-50">
+                            <img src="${imgUrl}" class="w-full h-auto rounded-2xl" alt="Additional process image" />
+                        </div>
+                    `;
+                });
+                processGalleryAfterVideos.classList.remove('hidden');
+            } else {
+                processGalleryAfterVideos.classList.add('hidden');
             }
 
             detailSection.classList.remove('hidden');

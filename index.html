@@ -59,7 +59,31 @@
                 <p class="text-stone-400 font-medium text-sm">Recent projects I am proud to have shaped</p>
             </div>
 
-            <div class="w-full max-w-xl md:max-w-4xl mx-auto flex justify-center items-center relative min-h-[320px] md:min-h-[440px] select-none overflow-visible" id="carousel-track"></div>
+            <div class="w-full max-w-xl md:max-w-4xl mx-auto relative">
+                <button
+                    id="carousel-prev"
+                    type="button"
+                    aria-label="Previous carousel card"
+                    class="absolute left-0 md:-left-3 top-1/2 -translate-y-1/2 z-40 inline-flex items-center justify-center w-10 h-10 rounded-full border-2 border-stone-800 bg-white text-stone-800 shadow-[3px_3px_0_0_#1a1a1a] hover:bg-stone-100 active:translate-y-[1px] transition-all"
+                >
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7" />
+                    </svg>
+                </button>
+
+                <div class="flex justify-center items-center relative min-h-[320px] md:min-h-[440px] select-none overflow-visible" id="carousel-track"></div>
+
+                <button
+                    id="carousel-next"
+                    type="button"
+                    aria-label="Next carousel card"
+                    class="absolute right-0 md:-right-3 top-1/2 -translate-y-1/2 z-40 inline-flex items-center justify-center w-10 h-10 rounded-full border-2 border-stone-800 bg-white text-stone-800 shadow-[3px_3px_0_0_#1a1a1a] hover:bg-stone-100 active:translate-y-[1px] transition-all"
+                >
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7" />
+                    </svg>
+                </button>
+            </div>
 
             <div class="pt-2 w-full flex justify-center px-4 sm:px-0">
                 <button id="project-action-button" class="carousel-cta inline-flex items-center justify-center min-h-[52px] w-full sm:w-auto px-6 py-4 bg-[#16a34a] text-white rounded-2xl font-extrabold text-xs uppercase tracking-wider shadow-md hover:bg-[#166534] hover:shadow-lg transition-all duration-300 transform active:scale-95">
@@ -73,18 +97,18 @@
         <section class="flex flex-col items-center text-center space-y-8 max-w-2xl mx-auto mt-16">
             <div class="space-y-2">
                 <h2 class="text-3xl md:text-4xl font-black tracking-tight uppercase">in case you need me for...</h2>
-                <p class="text-stone-400 font-medium text-sm">design which matters and not only sells and you ready for somthing new</p>
+                <p class="text-stone-400 font-medium text-sm">design that matters, not only sells, and is ready for something new</p>
             </div>
 
             <div class="flex flex-wrap justify-center gap-3 max-w-xl">
                 <span class="service-pill bg-[#dcfce7] text-[#16a34a] px-5 py-2.5 rounded-2xl font-bold text-xs tracking-tight">Brand Strategy</span>
                 <span class="service-pill bg-[#dcfce7] text-[#16a34a] px-5 py-2.5 rounded-2xl font-bold text-xs tracking-tight">Visual Identity</span>
-                <span class="service-pill bg-[#dcfce7] text-[#16a34a] px-5 py-2.5 rounded-2xl font-bold text-xs tracking-tight">Typographie</span>
+                <span class="service-pill bg-[#dcfce7] text-[#16a34a] px-5 py-2.5 rounded-2xl font-bold text-xs tracking-tight">Typography</span>
                 <span class="service-pill bg-[#dcfce7] text-[#16a34a] px-5 py-2.5 rounded-2xl font-bold text-xs tracking-tight">Design Systems</span>
             </div>
 
             <a href="mailto:lisa.schneider.business@gmail.com" class="chat-cta inline-flex items-center justify-center bg-[#16a34a] text-white px-8 py-4 rounded-2xl font-extrabold text-xs uppercase tracking-wider shadow-md hover:bg-[#166534] hover:shadow-lg transition-all duration-300 transform active:scale-95 mt-2">
-                lets chat!
+                let's chat!
             </a>
         </section>
 
@@ -123,22 +147,30 @@
     <script src="accessibility-mode.js"></script>
     <script>
         const track = document.getElementById('carousel-track');
+        const prevButton = document.getElementById('carousel-prev');
+        const nextButton = document.getElementById('carousel-next');
         let cards = [], totalCards = 0, projectData = [];
         const actionButton = document.getElementById('project-action-button');
         let activeIndex = 0, isDragging = false, startX = 0, currentTranslate = 0;
         const isTouchInput = window.matchMedia('(pointer: coarse)').matches;
 
-        function normalizeProjects(data) {
-            return Object.entries(data).map(([id, project]) => ({ id, ...project }));
+        function normalizeCollection(data) {
+            return Object.entries(data).map(([id, item]) => ({ id, ...item }));
         }
 
         function createProjectCards(projects) {
             track.innerHTML = '';
-            projectData = projects.map(p => ({ id: p.id, title: p.title, url: `project-layout.html?id=${encodeURIComponent(p.id)}` }));
+            projectData = projects.map(item => {
+                const detailUrl = item.kind === 'sidequest'
+                    ? `sidequest-layout.html?id=${encodeURIComponent(item.id)}`
+                    : `project-layout.html?id=${encodeURIComponent(item.id)}`;
+                return { id: item.id, title: item.title, url: detailUrl };
+            });
             projects.forEach((project, index) => {
                 const card = document.createElement('div');
                 card.className = 'fan-card absolute w-[300px] h-[225px] md:w-[440px] md:h-[330px] rounded-[2rem] shadow-[6px_6px_0px_0px_rgba(26,26,26,1)] overflow-hidden flex flex-col justify-end p-0 h-full origin-bottom cursor-pointer';
-                card.innerHTML = `<div class="w-full h-[calc(100%-56px)] overflow-hidden relative rounded-t-[2rem]"><img src="${project.heroImage}" class="h-full w-full object-cover" /></div><div class="w-full bg-white px-4 py-3"><h3 class="text-sm font-black uppercase text-stone-900">${project.title}</h3></div>`;
+                const coverImage = project.heroImage || project.imagePath || '';
+                card.innerHTML = `<div class="w-full h-full overflow-hidden relative rounded-[2rem]"><img src="${coverImage}" class="h-full w-full object-cover" alt="${project.title || 'Carousel image'}" /></div>`;
                 card.addEventListener('click', () => {
                     activeIndex = index;
                     layoutCarousel(0);
@@ -148,6 +180,10 @@
             });
             cards = Array.from(document.querySelectorAll('.fan-card'));
             totalCards = cards.length;
+            cards.forEach(card => {
+                card.style.willChange = 'transform';
+                card.style.transition = 'transform 0.55s cubic-bezier(0.22, 0.61, 0.36, 1)';
+            });
         }
 
         function updateMetadata(index) {
@@ -156,18 +192,35 @@
             actionButton.innerText = `view ${data.title}`;
         }
 
+        function goToPreviousCard() {
+            if (!totalCards) return;
+            activeIndex = (activeIndex - 1 + totalCards) % totalCards;
+            layoutCarousel(0);
+            updateMetadata(activeIndex);
+        }
+
+        function goToNextCard() {
+            if (!totalCards) return;
+            activeIndex = (activeIndex + 1) % totalCards;
+            layoutCarousel(0);
+            updateMetadata(activeIndex);
+        }
+
         function layoutCarousel(dragOffset = 0) {
             const isMobileCarousel = window.matchMedia('(max-width: 767px)').matches;
             const xSpacing = isMobileCarousel ? 58 : 86;
             const ySpacing = isMobileCarousel ? 14 : 20;
+            const rotationFactor = isMobileCarousel ? 7 : 8;
 
             cards.forEach((card, i) => {
                 let offset = i - activeIndex;
                 if (offset > totalCards / 2) offset -= totalCards;
                 if (offset < -totalCards / 2) offset += totalCards;
-                const dOffset = offset - (dragOffset / 180);
+                const dOffset = offset - (dragOffset / 220);
+                const distance = Math.abs(dOffset);
+                const scale = Math.max(0.9, 1 - distance * 0.06);
                 card.style.zIndex = 30 - Math.round(Math.abs(dOffset) * 2);
-                card.style.transform = `translateX(${dOffset * xSpacing}px) translateY(${Math.abs(dOffset) * ySpacing}px) rotate(${dOffset * 9}deg) scale(${i === activeIndex ? 1 : 0.92})`;
+                card.style.transform = `translateX(${dOffset * xSpacing}px) translateY(${distance * ySpacing}px) rotate(${dOffset * rotationFactor}deg) scale(${scale})`;
             });
         }
 
@@ -176,20 +229,34 @@
         function dragMove(e) { if (!isDragging) return; currentTranslate = (e.type.includes('touch') ? e.touches[0].clientX : e.clientX) - startX; layoutCarousel(currentTranslate); }
         function dragEnd() {
             if (!isDragging) return; isDragging = false;
-            cards.forEach(c => c.style.transition = 'transform 0.4s cubic-bezier(0.16, 1, 0.3, 1)');
+            cards.forEach(c => c.style.transition = 'transform 0.55s cubic-bezier(0.22, 0.61, 0.36, 1)');
             if (currentTranslate < -60) activeIndex = (activeIndex + 1) % totalCards;
             else if (currentTranslate > 60) activeIndex = (activeIndex - 1 + totalCards) % totalCards;
             currentTranslate = 0; layoutCarousel(0); updateMetadata(activeIndex);
         }
 
+        prevButton.addEventListener('click', goToPreviousCard);
+        nextButton.addEventListener('click', goToNextCard);
 
-        fetch('projects.json')
-            .then(res => res.json())
-            .then(data => {
-                const all = normalizeProjects(data);
-                const allowed = ['vistar-media', 'wie-gaat-eerst', 'albert-heijn-techno'];
-                const filtered = all.filter(p => allowed.includes(p.id));
-                createProjectCards(filtered);
+        Promise.all([
+            fetch('projects.json').then(res => res.json()),
+            fetch('sidequests.json').then(res => res.json())
+        ])
+            .then(([projectsData, sidequestsData]) => {
+                const allProjects = normalizeCollection(projectsData).map(item => ({ ...item, kind: 'project' }));
+                const allSidequests = normalizeCollection(sidequestsData).map(item => ({ ...item, kind: 'sidequest' }));
+
+                const allowedProjects = ['vistar-media', 'wie-gaat-eerst', 'albert-heijn-techno'];
+                const featuredProjects = allProjects.filter(item => allowedProjects.includes(item.id));
+                const borderlandSidequest = allSidequests.find(item =>
+                    (item.title || '').toLowerCase() === 'borderland subversion'
+                );
+
+                const carouselItems = borderlandSidequest
+                    ? [...featuredProjects, borderlandSidequest]
+                    : featuredProjects;
+
+                createProjectCards(carouselItems);
                 updateMetadata(0);
                 layoutCarousel(0);
             });
